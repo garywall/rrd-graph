@@ -1,0 +1,32 @@
+$Id: README,v 1.3 2005/11/25 14:42:05 gary Exp $
+
+GWFL RRD-Graph README
+--------------------
+
+1. Purpose
+
+RRD-Graph is basically just a Perl CGI script used to represent the
+data stored by FIFO-RRD as graphs via the Nagios interface.
+
+2. Requirements
+
+* Perl 5
+* CGI enabled web server (ie. Apache)
+* The following Perl modules: POSIX, RRDs
+* Access to FIFO-RRD's template_config.pm & Validate.pm
+
+3. Compiling and Installation
+
+a) mv rrd-graph.cgi /path/to/nagios/cgi
+b) mv *.pm /path/to/fifo-rrd/installation
+c) Configure graph_templates.pm and rrd-graph.pl
+d) Make sure rrd-graph.cgi can write to the FIFO-RRD storage directory
+   and the graph image directory (under the webroot).
+
+Refer to http://gwfl.daimonic.org/?p=doc for an implementation example.
+
+4. Author
+
+Gary Wall <gary@daimonic.org>
+
+
